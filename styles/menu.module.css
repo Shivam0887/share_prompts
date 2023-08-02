@@ -1,0 +1,72 @@
+.menu_btn {
+  position: fixed;
+  top: 20px;
+  right: 35px;
+  cursor: pointer;
+  width: 25px;
+  height: 20px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.frios_top,
+.frios_middle,
+.frios_bottom {
+  position: absolute;
+  width: 100%;
+  border-top: 4px solid;
+  border-radius: 1rem;
+  transform: rotate(0);
+  transition: transform 0.2s linear;
+}
+
+.frios_middle {
+  top: 40%;
+  width: 20px;
+  right: 0px;
+  transform: translateX(0);
+  transition: transform 0.5s linear;
+}
+
+.frios_bottom {
+  bottom: 0px;
+}
+
+.toggle_menu .frios_top {
+  transform-origin: 0%;
+  transform: rotate(40deg);
+}
+
+.toggle_menu .frios_bottom {
+  transform-origin: 0%;
+  transform: rotate(-40deg);
+}
+
+.toggle_menu .frios_middle {
+  transform: translateX(300%);
+}
+
+.slide {
+  display: block;
+  position: fixed;
+  overflow: hidden;
+  top: 10px;
+  right: 30px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 1px #ebe9e9;
+  background-color: rgba(255, 255, 255, 0.8);
+  animation: move 0.3s linear;
+  z-index: 1;
+}
+
+@keyframes move {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 200px;
+  }
+}
